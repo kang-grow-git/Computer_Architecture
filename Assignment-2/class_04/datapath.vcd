@@ -1,0 +1,291 @@
+$date
+	Tue Apr 07 19:38:18 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module datapath_tb $end
+$var wire 32 ! pc_out [31:0] $end
+$var wire 32 " alu_result [31:0] $end
+$var reg 3 # alu_ctrl [2:0] $end
+$var reg 1 $ alu_src $end
+$var reg 1 % clk $end
+$var reg 1 & mem_to_reg $end
+$var reg 1 ' mem_write_en $end
+$var reg 1 ( reg_dst $end
+$var reg 1 ) reg_write_en $end
+$var reg 1 * rst_n $end
+$scope module uut $end
+$var wire 3 + alu_ctrl [2:0] $end
+$var wire 1 $ alu_src $end
+$var wire 1 % clk $end
+$var wire 1 & mem_to_reg $end
+$var wire 1 ' mem_write_en $end
+$var wire 32 , pc_out [31:0] $end
+$var wire 1 ( reg_dst $end
+$var wire 1 ) reg_write_en $end
+$var wire 1 * rst_n $end
+$var wire 1 - zero_flag $end
+$var wire 5 . write_reg [4:0] $end
+$var wire 32 / src_b [31:0] $end
+$var wire 32 0 sign_imm [31:0] $end
+$var wire 32 1 result [31:0] $end
+$var wire 32 2 read_data [31:0] $end
+$var wire 32 3 rd2 [31:0] $end
+$var wire 32 4 rd1 [31:0] $end
+$var wire 32 5 pc [31:0] $end
+$var wire 32 6 instr [31:0] $end
+$var wire 32 7 alu_result [31:0] $end
+$scope module u_alu $end
+$var wire 3 8 alu_ctrl [2:0] $end
+$var wire 32 9 src_b [31:0] $end
+$var wire 1 - zero $end
+$var wire 32 : src_a [31:0] $end
+$var reg 32 ; result [31:0] $end
+$upscope $end
+$scope module u_data_mem $end
+$var wire 32 < addr [31:0] $end
+$var wire 1 % clk $end
+$var wire 1 ' mem_write_en $end
+$var wire 32 = read_data [31:0] $end
+$var wire 32 > write_data [31:0] $end
+$upscope $end
+$scope module u_if_stage $end
+$var wire 1 % clk $end
+$var wire 32 ? current_pc [31:0] $end
+$var wire 1 * rst_n $end
+$var wire 32 @ pc_next [31:0] $end
+$var wire 32 A pc [31:0] $end
+$var wire 32 B instr [31:0] $end
+$scope module u_imem $end
+$var wire 32 C rd [31:0] $end
+$var wire 32 D addr [31:0] $end
+$upscope $end
+$scope module u_pc $end
+$var wire 1 % clk $end
+$var wire 32 E pc_next [31:0] $end
+$var wire 1 * rst_n $end
+$var reg 32 F pc [31:0] $end
+$upscope $end
+$upscope $end
+$scope module u_reg_file $end
+$var wire 1 % clk $end
+$var wire 5 G ra1 [4:0] $end
+$var wire 5 H ra2 [4:0] $end
+$var wire 5 I wa3 [4:0] $end
+$var wire 32 J wd3 [31:0] $end
+$var wire 1 ) we3 $end
+$var wire 32 K rd2 [31:0] $end
+$var wire 32 L rd1 [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 L
+bx K
+b0 J
+b1000 I
+b1000 H
+b0 G
+b0 F
+b100 E
+b0 D
+b100000000010000000000000000111 C
+b100000000010000000000000000111 B
+b0 A
+b100 @
+b0 ?
+bx >
+bx =
+b0 <
+b0 ;
+b0 :
+bx 9
+b0 8
+b0 7
+b100000000010000000000000000111 6
+b0 5
+b0 4
+bx 3
+bx 2
+b0 1
+b111 0
+bx /
+b1000 .
+1-
+b0 ,
+b0 +
+0*
+0)
+0(
+0'
+0&
+0%
+0$
+b0 #
+b0 "
+b0 !
+$end
+#5000
+1%
+#10000
+b111 1
+b111 J
+0-
+b111 "
+b111 7
+b111 ;
+b111 <
+b111 /
+b111 9
+0%
+b10 #
+b10 +
+b10 8
+1$
+1)
+1*
+#15000
+b11 1
+b11 J
+b11 "
+b11 7
+b11 ;
+b11 <
+b11 /
+b11 9
+b1001 .
+b1001 I
+b11 0
+b1001 H
+bx 3
+bx >
+bx K
+b100000000010010000000000000011 6
+b100000000010010000000000000011 B
+b100000000010010000000000000011 C
+b1000 @
+b1000 E
+b100 !
+b100 ,
+b100 5
+b100 ?
+b100 A
+b100 D
+b100 F
+1%
+#20000
+0%
+#25000
+b101000000101001 1
+b101000000101001 J
+b101000000101001 "
+b101000000101001 7
+b101000000101001 ;
+b101000000101001 <
+b101000000100010 /
+b101000000100010 9
+b111 4
+b111 :
+b111 L
+b101000000100010 0
+b1000 G
+b11 3
+b11 >
+b11 K
+b1000010010101000000100010 6
+b1000010010101000000100010 B
+b1000010010101000000100010 C
+b1100 @
+b1100 E
+b1000 !
+b1000 ,
+b1000 5
+b1000 ?
+b1000 A
+b1000 D
+b1000 F
+1%
+#26000
+b100 1
+b100 J
+b1010 .
+b1010 I
+b100 "
+b100 7
+b100 ;
+b100 <
+b11 /
+b11 9
+1(
+b110 #
+b110 +
+b110 8
+0$
+#30000
+0%
+#35000
+bx 1
+bx J
+bx /
+bx 9
+x-
+bx "
+bx 7
+bx ;
+bx <
+bx 3
+bx >
+bx K
+bx 4
+bx :
+bx L
+bx .
+bx I
+bx 0
+bx H
+bx G
+bx 6
+bx B
+bx C
+b10000 @
+b10000 E
+b1100 !
+b1100 ,
+b1100 5
+b1100 ?
+b1100 A
+b1100 D
+b1100 F
+1%
+#40000
+0%
+#45000
+b10100 @
+b10100 E
+b10000 !
+b10000 ,
+b10000 5
+b10000 ?
+b10000 A
+b10000 D
+b10000 F
+1%
+#50000
+0%
+#55000
+b11000 @
+b11000 E
+b10100 !
+b10100 ,
+b10100 5
+b10100 ?
+b10100 A
+b10100 D
+b10100 F
+1%
